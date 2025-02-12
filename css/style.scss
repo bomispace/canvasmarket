@@ -134,9 +134,9 @@ header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-b
                 li{color: $main1;}
                 }
         #art_wrap{height: 500px; display: flex; justify-content: center; align-items: center; gap: 20px; 
-            #art_info{background: #D9D9D9; width: 100%;
-                }//#art_info
-                    }//#art_wrap
+            #art_info{background: #D9D9D9; width: 500px; height: 100%;
+                    }//#art_info
+                }//#art_wrap
     }//#artist
 
 
