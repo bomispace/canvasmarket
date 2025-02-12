@@ -1,0 +1,186 @@
+
+@import url("fonts.css");
+@import url('https://fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+$main1:#333333;
+$main2:#ffffff;
+
+:root {
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+}
+
+body{background: #F5F5F5;}
+/*header*/
+header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-bottom: 1px solid #cfcfcf;
+    transition: all 0.5s ease-in-out;
+&.scrolled{transform: translateY(-95px);}
+}
+#top_banner{display: flex; justify-content: center; align-items: center;
+    width: 100%; height: 40px;
+    background: #000000; 
+    #banner_wrap{position: relative; height: 40px; margin: 0 auto; font-size: 1rem; color: #ffffff; text-align: center; line-height: 40px;
+            overflow: hidden; padding:0 200px;
+    span{position: absolute; right:0; bottom:9px; font-size: 0.85rem; color: #ffffff; text-decoration: underline; line-height: 150%;}
+    white-space: nowrap;}
+}//#top_banner
+#top_menu{margin: 0 auto;
+#logo{padding-top:5px; display: flex; justify-content: center; align-items: center;
+    a{display: flex; align-items: center; gap:10px; text-decoration: none; 
+        color: $main1; font-size: 1.5rem; font-weight: 700; letter-spacing: -1px;}
+         img{width: 50px; height: 50px;}
+        }//#logo
+}//#top_menu
+#top_wrap{display: flex; justify-content: center; align-items: center; gap: 80px;
+            margin: 0 auto; padding: 5px 0 10px 0;
+        
+    #nav{
+        ul{display: flex; justify-content: center; align-items: center; gap: 60px;
+            li{font-size: 1rem;}}
+    }//#nav
+    #search{border-radius: 10px; padding: 5px 10px; background: #F1F1F1; max-width: 250px; width: 20%;
+        input{background: #F1F1F1; border: none; width: calc(100% - 20px);  height: 20px; font-size: 0.9rem; vertical-align: middle; border: 0; padding:0; }
+        img{width: 20px; height: 20px; vertical-align: middle;}        
+    }//#search
+
+#login{display: flex; justify-content: center; align-items: center; gap: 20px;
+    a{position: relative;
+    &:hover ul{display: flex;}}
+        ul{position: absolute; display: flex; flex-direction: column; gap:10px;
+            padding:10px; background: #D9D9D9; display: none;}
+
+            li{color: $main1; font-size: 0.9rem; }
+}//#login
+}//#top_wrap
+
+/*//::header*/
+#icon{ position: fixed; right: 2%; top: 50%;
+    #sns{
+        img{width: 50px; margin-bottom: 5px;}
+    }//#sns
+    #uproad{ margin-top: 30px;
+        img{width: 50px;}
+    }//#uproad
+}//#icon
+
+/*main*/
+
+
+#main_visual{ margin-bottom: 50px; 
+    .inner{max-width:1400px; margin: 0 auto; padding-top: 200px;}
+    #article_wrap{ width: 100%;
+        .main_visual_wrap{ 
+            background: #404952; position: relative;
+            display: flex; 
+            #main_left{width: 50%;
+                img{width: 100%;}
+            }
+            #main_right{ 
+                img{width: 30%; position: absolute; right: 0;}
+                h2{font-family:"Libre Baskerville"; font-size: 4.38rem; color: #ffffff;
+                line-height: 130%; transform: rotate(-10deg);
+                font-style: italic;
+                position: absolute; top: 16%; left: 55%;}
+                .title{font-family: "GabiaHeuldot-Regular"; font-size: 55px;}
+                
+                p{font-family: "TheJamsil"; font-size: 1.56rem; color: #ffffff;
+                position: absolute; top: 60%; left: 60%; }
+            }//main_right
+
+        }//#main_visual_wrap
+    }//#article_wrap
+
+}//#main_visual
+
+
+#notice{
+    background: #D9D9D9; padding: 15px; margin-bottom: 100px;
+    a {display: flex; justify-content: center; align-items: center; gap: 40px;
+        text-decoration: none; color:$main1;
+    p{color: #333333; font-size: 1.2rem; font-weight: 600;}
+    span{text-decoration: underline;}
+    }
+}//#notice
+
+#collection{
+    background: url(../images/bg.jpg) no-repeat center center; background-size: cover;
+    h3{ font-size: 1.9rem; padding-top:40px; text-align: center; color:$main1;
+    }
+    ul{display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px 0;
+        li{color: $main1;}
+    }
+    .inner{max-width: 1400px; margin: 0 auto; 
+    .collection_wrap{position: relative; border: 1px solid yellow; 
+        padding-top:50%;
+        .collection_box{position: absolute;
+            img{width:100%;}
+        }
+        .box1{left:0; top:0; width: 47.5%;}
+        .box2{left:49%; top:0; width: 21.4%;}
+        .box3{left:108%; top:0; width: 130.1%;}
+        .box4{left:0; top:50%; width: 47.5%;}
+
+
+    }//collection_wrap
+    }//#inner
+
+}//#collection
+
+#artist{ margin-top: 50px;
+    .inner{max-width: 1400px; margin: 0 auto;}
+    h3{ font-size: 1.9rem; padding-top:40px; text-align: center; color:$main1;
+    }
+    ul{display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px 0;
+        li{color: $main1;}
+    }
+}
+
+
+
+/*footer*/
+footer{background: #F1F1F1; padding: 30px 120px;
+    #bt_wrap{display: flex; justify-content: space-between;
+        #bt_logo{
+            a{text-decoration: none; display: flex; align-items: center; gap: 10px; 
+                color: $main1; font-size: 1rem; font-weight: 700;
+                img{width: 20px; height: 20px;}
+            }
+        }//#bt_logo
+        #bt_massage{padding-top:30px;
+                    p{font-size: 0.9rem; color: $main1;
+                    line-height: 150%;}
+                }//#bt_massage
+        #bt_send{background: #ffffff; margin-top:20px; padding: 10px; border-radius: 10px;
+            input{border: none; font-size: 0.9rem; text-align: center; }
+            img{width: 20px; height: 20px; vertical-align: middle;}        
+
+        }//#bt_send
+
+        #bt_right{display: flex; 
+            #bt_menu{
+                    display: flex; justify-content: center; gap: 10px;
+                    padding-right:30px; padding-top:20px;
+                ul{display: flex; flex-direction: column; gap: 15px;
+                  li{color: $main1; font-size: 0.9rem; 
+                    
+                  }  }
+            }//#bt_menu
+            #bt_logo_right{ 
+                img{width: 225px; filter: grayscale(100%); opacity: 40%;}
+
+            }//#bt_logo_right
+        }//#bt_right
+    }//#bt_wrap
+    #bt_info{ margin:20px 0px; display: flex; color: $main1; gap:30px;
+                font-size: 0.9rem;
+    }//bt_info
+    hr{color: #757575; width: 100%; margin: 20px 0px;}
+    #bt_policy{
+        ul{display: flex; gap: 20px; 
+            justify-content: center; align-items: center; gap: 150px;
+            li{font-size: 0.9rem; color: $main1; font-weight: 600;}
+        }//#bt_policy
+    }//bt_policy
+
+}//footer
