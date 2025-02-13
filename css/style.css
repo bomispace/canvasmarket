@@ -4,8 +4,14 @@
 :root {
   font-family: "Noto Sans KR";
   font-weight: 400;
+  font-size: 16px;
 }
 
+@media (max-width: 1400px) {
+  :root {
+    font-size: 1.14vw;
+  }
+}
 body {
   background: #F5F5F5;
 }
@@ -236,10 +242,10 @@ header.scrolled {
 #collection {
   background: url(../images/bg.jpg) no-repeat center center;
   background-size: cover;
+  padding: 40px 0;
 }
 #collection h3 {
   font-size: 1.9rem;
-  padding-top: 40px;
   text-align: center;
   color: #333333;
 }
@@ -261,6 +267,7 @@ header.scrolled {
   position: relative;
   border: 1px solid yellow;
   padding-top: 50%;
+  padding-bottom: 0.5%;
 }
 #collection .inner .collection_wrap .collection_box {
   position: absolute;
@@ -274,19 +281,32 @@ header.scrolled {
   width: 47.5%;
 }
 #collection .inner .collection_wrap .box2 {
-  left: 49%;
+  left: 48.5%;
   top: 0;
   width: 21.4%;
 }
 #collection .inner .collection_wrap .box3 {
-  left: 108%;
+  left: 71%;
   top: 0;
-  width: 130.1%;
+  width: 29%;
 }
 #collection .inner .collection_wrap .box4 {
   left: 0;
-  top: 50%;
-  width: 47.5%;
+  bottom: 0;
+  width: 25%;
+}
+#collection .inner .collection_wrap .box5 {
+  left: 26%;
+  bottom: 0;
+  width: 44%;
+}
+#collection .inner .collection_wrap .box6 {
+  right: 0;
+  bottom: 0;
+  width: 28.8%;
+}
+#collection .inner .collection_wrap .collection_info {
+  display: none;
 }
 
 #artist {
@@ -313,16 +333,106 @@ header.scrolled {
   color: #333333;
 }
 #artist #art_wrap {
-  height: 500px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 #artist #art_wrap #art_info {
   background: #D9D9D9;
-  width: 500px;
-  height: 100%;
+  width: calc(40% - 60px);
+  text-align: center;
+  padding-bottom: 20px;
+}
+#artist #art_wrap #art_info .img_logo {
+  width: 60%;
+  margin: 6% auto;
+}
+#artist #art_wrap #art_info img {
+  width: 100%;
+}
+#artist #art_wrap #art_info a {
+  text-decoration: none;
+  color: #333333;
+}
+#artist #art_wrap #art_info span {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+#artist #art_wrap #art_info h4 {
+  font-size: 1.87rem;
+  padding: 4% 0;
+}
+#artist #art_wrap #art_info p {
+  font-size: 1.05rem;
+  line-height: 150%;
+}
+#artist #art_wrap .product_box {
+  width: 30%;
+}
+#artist #art_wrap .product_box img {
+  width: 100%;
+}
+#artist #art_wrap .product_box a {
+  text-decoration: none;
+  color: #333333;
+}
+#artist #art_wrap .product_box h4 {
+  font-size: 1.25rem;
+}
+#artist #art_wrap .product_box .product_info {
+  text-align: center;
+}
+#artist #art_wrap .product_box .product_info h4 {
+  font-size: 1.25rem;
+  padding: 4% 0;
+}
+#artist #art_wrap .product_box .product_info p {
+  display: inline-block;
+  color: #919191;
+  font-size: 1.25rem;
+  text-decoration: line-through;
+}
+#artist #art_wrap .product_box .product_info span {
+  color: #ff0000;
+  font-size: 1.25rem;
+  padding-left: 5px;
+}
+
+#style {
+  margin-top: 200px;
+}
+#style #style_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+#style #style_wrap .style_box p {
+  text-align: center;
+  font-size: 1.52rem;
+  padding-bottom: 20px;
+  position: relative;
+}
+#style #style_wrap .style_box p img {
+  display: none;
+  position: absolute;
+  top: -70%;
+  left: 42%;
+}
+#style #style_wrap .style_box p:hover img {
+  display: block;
+}
+#style #style_wrap .style_box a {
+  text-decoration: none;
+  color: #333333;
+}
+
+#community {
+  margin-top: 200px;
+}
+#community .inner {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /*footer*/

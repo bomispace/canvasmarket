@@ -9,7 +9,16 @@ $main2:#ffffff;
 :root {
     font-family: 'Noto Sans KR';
     font-weight: 400;
+    font-size: 16px;
 }
+@media (max-width: 1400px){
+    :root{
+        font-size: 1.14vw;
+    }
+}
+
+
+
 
 body{background: #F5F5F5;}
 /*header*/
@@ -105,23 +114,26 @@ header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-b
 
 #collection{
     background: url(../images/bg.jpg) no-repeat center center; background-size: cover;
-    h3{ font-size: 1.9rem; padding-top:40px; text-align: center; color:$main1;
+    padding: 40px 0;
+    h3{ font-size: 1.9rem; text-align: center; color:$main1;
     }
     ul{display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px 0;
         li{color: $main1;}
     }
     .inner{max-width: 1400px; margin: 0 auto; 
     .collection_wrap{position: relative; border: 1px solid yellow; 
-        padding-top:50%;
+        padding-top:50%; padding-bottom: 0.5%;
         .collection_box{position: absolute;
             img{width:100%;}
         }
         .box1{left:0; top:0; width: 47.5%;}
-        .box2{left:49%; top:0; width: 21.4%;}
-        .box3{left:108%; top:0; width: 130.1%;}
-        .box4{left:0; top:50%; width: 47.5%;}
+        .box2{left:48.5%; top:0; width: 21.4%;}
+        .box3{left:71%; top:0; width: 29%;}
+        .box4{left:0; bottom: 0; width: 25%;}
+        .box5{left:26%; bottom: 0; width: 44%;}
+        .box6{right:0; bottom: 0; width: 28.8%;}
 
-
+.collection_info{display: none;}
     }//collection_wrap
     }//#inner
 
@@ -133,13 +145,56 @@ header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-b
             ul{display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px 0;
                 li{color: $main1;}
                 }
-        #art_wrap{height: 500px; display: flex; justify-content: center; align-items: center; gap: 20px; 
-            #art_info{background: #D9D9D9; width: 500px; height: 100%;
-                    }//#art_info
-                }//#art_wrap
-    }//#artist
+    #art_wrap{
+        display: flex; justify-content: center; gap: 30px; 
+        #art_info{background: #D9D9D9; width: calc(40% - 60px); text-align: center;
+            padding-bottom: 20px;
+            .img_logo{width: 60%; margin: 6% auto;}
+            img{width: 100%; }
+            a{text-decoration: none; color: $main1;}
+            span{font-size:1.25rem; font-weight: 600;}
+            h4{font-size:1.87rem; padding: 4% 0;}
+            p{font-size: 1.05rem; line-height: 150%;}
+            
+        }//#art_info
+        .product_box{
+            width: 30%;
+            img{width: 100%;}
+            a{text-decoration: none; color: $main1;}
+            h4{font-size: 1.25rem;}
+            .product_info{ text-align: center;
+                h4{font-size:1.25rem; padding: 4% 0;}
+                p{display: inline-block;  color: #919191; font-size: 1.25rem; text-decoration: line-through;}
+                span{color:#ff0000; font-size: 1.25rem; padding-left: 5px;}
+                
+            }//.product_info
+            
+        }//#product_box
 
+    }//#art_wrap
+}//#artist
 
+#style{
+    margin-top: 200px;
+    #style_wrap{display: flex; justify-content: center; align-items: center; gap: 40px;
+        .style_box{
+            p{text-align: center; font-size:1.52rem; padding-bottom: 20px;
+            position: relative;
+            img{display: none; position: absolute; top: -70%; left: 42%;}
+            &:hover img {display: block;}
+        }
+            a{text-decoration: none; color: $main1; }
+            
+
+        }//#style_box
+
+    }//#style_wrap
+}//#style
+
+#community{
+    margin-top: 200px;
+    .inner{max-width: 1400px; margin: 0 auto;}
+}//#community
 
 
 
@@ -189,3 +244,4 @@ footer{background: #F1F1F1; padding: 30px 120px;
     }//bt_policy
 
 }//footer
+
