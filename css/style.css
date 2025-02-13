@@ -428,11 +428,111 @@ header.scrolled {
 }
 
 #community {
-  margin-top: 200px;
+  margin: 200px 0 400px 0;
 }
 #community .inner {
   max-width: 1400px;
   margin: 0 auto;
+}
+#community h3 {
+  font-size: 1.9rem;
+  padding-top: 20px;
+  text-align: center;
+  color: #333333;
+}
+#community ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  padding: 10px 0;
+}
+#community ul li {
+  color: #969595;
+}
+#community #community_wrap {
+  position: relative;
+  margin-top: 20px;
+}
+#community #community_wrap #news {
+  width: 50%;
+  border: 1px solid #E2E7EB;
+}
+#community #community_wrap #news a {
+  text-decoration: none;
+  color: #333333;
+}
+#community #community_wrap #news img {
+  width: 100%;
+}
+#community #community_wrap #news h4 {
+  font-size: 1.25rem;
+  text-align: left;
+  padding: 10px 0 10px 10px;
+}
+#community #community_wrap #news span {
+  color: #979797;
+  font-size: 0.9rem;
+  padding-left: 10px;
+}
+#community #community_wrap #news p {
+  color: #979797;
+  font-size: 0.85rem;
+  line-height: 150%;
+  padding: 20px 10px;
+}
+#community #community_wrap #ep {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-left: 15px;
+}
+#community #community_wrap #ep .ep_box {
+  border: 1px solid #E2E7EB;
+}
+#community #community_wrap #ep .ep_box a {
+  text-decoration: none;
+  text-align: center;
+}
+#community #community_wrap #ep .ep_box p {
+  color: #969595;
+  font-size: 0.8rem;
+  padding-top: 15px;
+}
+#community #community_wrap #ep .ep_box h4 {
+  font-size: 1rem;
+  color: #333333;
+  padding: 15px 0;
+}
+#community #community_wrap #review {
+  display: flex;
+  justify-content: space-between;
+  gap: 21px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#community #community_wrap #review .review_box {
+  border: 1px solid #E2E7EB;
+}
+#community #community_wrap #review .review_box a {
+  text-decoration: none;
+  color: #333333;
+}
+#community #community_wrap #review .review_box p {
+  padding-left: 10px;
+  color: #DF9800;
+  padding-top: 5px;
+}
+#community #community_wrap #review .review_box h4 {
+  padding-left: 10px;
+  font-size: 0.85rem;
+  line-height: 150%;
+  color: #333333;
+  padding-top: 10px;
 }
 
 /*footer*/
