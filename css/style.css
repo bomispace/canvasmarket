@@ -588,6 +588,14 @@ header.scrolled {
 #style #style_wrap .style_box {
   position: relative;
 }
+#style #style_wrap .style_box a {
+  text-decoration: none;
+  color: #333333;
+}
+#style #style_wrap .style_box p {
+  font-size: 1.25rem;
+  line-height: 150%;
+}
 #style #style_wrap .style_box .style_info {
   position: absolute;
   top: 50%;
@@ -602,6 +610,9 @@ header.scrolled {
 #style #style_wrap .style_box .style_info p {
   font-size: 1.25rem;
   line-height: 150%;
+}
+#style #style_wrap .style_box .style_info span {
+  text-align: center;
 }
 #style #style_wrap .style_box p {
   text-align: center;
