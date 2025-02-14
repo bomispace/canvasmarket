@@ -29,6 +29,7 @@ header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-b
 #top_banner{display: flex; justify-content: center; align-items: center;
     width: 100%; height: 40px;
     background: #000000; 
+    a{text-decoration: none; color: $main2;}
     #banner_wrap{position: relative; height: 40px; margin: 0 auto; font-size: 1rem; color: #ffffff; text-align: center; line-height: 40px;
             overflow: hidden; padding:0 200px;
     span{position: absolute; right:0; bottom:9px; font-size: 0.85rem; color: #ffffff; text-decoration: underline; line-height: 150%;}
@@ -64,7 +65,7 @@ header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-b
 }//#top_wrap
 
 /*//::header*/
-#icon{ position: fixed; right: 2%; top: 50%;
+#icon{ position: fixed; right: 2%; top: 50%; z-index: 999;
     #sns{
         img{width: 50px; margin-bottom: 5px;}
     }//#sns
@@ -77,9 +78,10 @@ header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-b
 
 
 #main_visual{ margin-bottom: 50px; 
-    .inner{max-width:1400px; margin: 0 auto; padding-top: 200px;}
-    #article_wrap{ width: 100%;
-        .wrap1{background: #404952;
+    .inner{max-width:1400px; margin: 0 auto; padding-top: 200px; position: relative;}
+    .article_wrap{ width: 100%; display: flex; position: relative; 
+        .main_visual_wrap{flex-shrink: 0;}
+        .wrap1{background: #9baab9;
             position: relative;
             #main_left{width: 50%;
                 img{width: 100%;}
@@ -100,7 +102,7 @@ header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-b
                 img{width: 100%;}
             }
             .main_right{ 
-                img{width:50%; position: absolute; right: 13px; top: 11px;}
+                img{width:50%; position: absolute; right: 13px; top: 0px;}
                 p{font-family: "TheJamsil"; font-size: 1.56rem; color: $main1;
                     position: absolute; top: 60%; left: 60%;}
             }//.main_right
@@ -120,9 +122,16 @@ header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-b
                     position: absolute; top: 60%; left: 60%;}    
             }//.main_right
         }//.wrap3
-
     }//#article_wrap
-
+        #visual_info{position: absolute; bottom: 50px; right: 120px; 
+            color: $main1; font-size: 1.1rem; line-height: 200%;
+        p{border-top: 1px solid #464134; cursor: pointer;
+            &:last-child{border-bottom: 1px solid #464134;}
+            padding: 0 20px 0 40px;
+        &.active{color: #002b50; font-weight: bold;} 
+        a{text-decoration: none; color: $main1; float: right;}
+        }
+        }//#visual_info
 }//#main_visual
 
 
@@ -147,22 +156,38 @@ header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-b
     .collection_wrap{position: relative;
         padding-top:50%; padding-bottom: 0.5%;
         .collection_box{position: absolute;
-            img{width:100%;}
+            img{width:100%; transition: all 0.5s ease-in-out;}
+            a{text-decoration: none; color: $main1;}
+            &:hover{
+                img {opacity: 0.15;}
+                .collection_info{opacity: 1;}    
+            }    
         }
-        .box1{left:0; top:0; width: 47.5%;}
+        .box1{left:0; top:0; width: 47.5%; 
+            .collection_info{position: absolute; top: 50%; left: 50%;
+                transform: translate(-50%, -50%);}
+            
+        }
         .box2{left:48.5%; top:0; width: 21.4%;}
         .box3{left:71%; top:0; width: 29%;}
         .box4{left:0; bottom: 0; width: 25%;}
         .box5{left:26%; bottom: 0; width: 44%;}
         .box6{right:0; bottom: 0; width: 28.8%;}
 
-.collection_info{display: none;}
-    }//collection_wrap
+.collection_info{
+    text-align: center; color: $main1; opacity: 0; transition: all 0.5s ease-in-out;
+    position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%); 
+    h4{font-size: 1.5rem; font-weight: 600; line-height: 150%;}
+    p{font-size: 1.2rem; line-height: 150%; padding: 20px 0;}
+    span{font-size: 1.25rem; font-weight: 600;}
+    }//.collection_info
+    }//.collection_wrap
     }//#inner
 
 }//#collection
 
-#artist{ margin-top: 50px; 
+#artist{margin-top: 50px; 
     .inner{max-width: 1400px; margin: 0 auto;}
             h3{ font-size: 1.9rem; padding-top:40px; text-align: center; color:$main1;}
             ul{display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px 0;
@@ -170,18 +195,40 @@ header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-b
                 }
     #art_wrap{
         display: flex; justify-content: center; gap: 30px; 
+        
         #art_info{background: #D9D9D9; width: calc(40% - 60px); text-align: center;
-            padding-bottom: 20px;
+            position: relative;
+            padding-bottom: 20px; overflow: hidden;
             .img_logo{width: 60%; margin: 6% auto;}
             img{width: 100%; }
             a{text-decoration: none; color: $main1;}
             span{font-size:1.25rem; font-weight: 600;}
             h4{font-size:1.87rem; padding: 4% 0;}
             p{font-size: 1.05rem; line-height: 150%;}
+
+            .art_left{width: 60px; cursor: pointer;
+                position: absolute; top:310px; left: 10px;
+                img{width: 100%;}
+            }
+            .art_right{width: 60px; cursor: pointer;
+                position: absolute; top:310px; right: 10px;
+                img{width: 100%;}
+
+            }
+
             
         }//#art_info
+
+
+        .art_swiper{display: flex;}
+        .art_box{flex-shrink: 0;}
+
+        #product_wrap{width: calc(60% + 30px); overflow: hidden; position: relative;}
+        .product_swiper{display: flex;}
+        .product_list{display: flex; gap:30px; flex-shrink: 0; background: #f5f5f5;
+        padding-bottom: 10px;}
         .product_box{
-            width: 30%;
+            width: calc(50% - 30px);
             img{width: 100%;}
             a{text-decoration: none; color: $main1;}
             h4{font-size: 1.25rem;}
@@ -200,14 +247,20 @@ header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-b
 #style{
     margin-top: 200px;
     #style_wrap{display: flex; justify-content: center; align-items: center; gap: 40px;
-        .style_box{
+        transform:translateY(50px); transition:all .4s ease-in-out; //위에서 아래로 50px 내려옴
+        opacity: 0; //안보이게 셋팅
+        &.show{opacity: 1; transform:translateY(0);}
+        .style_box{position: relative;
+            .style_info{position: absolute; top: 50%; left: 0; width: 100%; text-align: center;
+                a{text-decoration: none; color: $main1;}
+                p{font-size: 1.25rem; line-height: 150%;}
+        }//.style_info
             p{text-align: center; font-size:1.52rem; padding-bottom: 20px;
             position: relative;
             img{display: none; position: absolute; top: -70%; left: 42%;}
             &:hover img {display: block;}
         }
             a{text-decoration: none; color: $main1; }
-            
 
         }//#style_box
 
@@ -216,14 +269,16 @@ header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-b
 
 #community{
     margin: 200px 0 400px 0;
+    transform:translateY(50px); transition:all .4s ease-in-out; //위에서 아래로 50px 내려옴
+    opacity: 0; //안보이게 셋팅
+    &.show{opacity: 1; transform:translateY(0);}
     .inner{max-width: 1400px; margin: 0 auto;}
     h3{font-size: 1.9rem; padding-top: 20px; text-align: center; color:$main1;}
     ul{display: flex; justify-content: center; align-items: center; gap: 70px; padding: 20px 0;
-
-        li{color: #969595;           
-        }
+        li{color: #969595;}
     }
     #community_wrap{
+
         position: relative; margin-top: 20px;
         #news{width: 50%; border: 1px solid #E2E7EB; 
             a{text-decoration: none; color: $main1;}

@@ -86,7 +86,6 @@ function EzenScrollClass(target="body", options={}){
         }
 
         
-		console.log(base+"/"+win_h+"/"+obj.add );
         if(obj.markers){
             markers_Y(base);
         }           
