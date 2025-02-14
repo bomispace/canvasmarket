@@ -251,17 +251,20 @@ header{position: fixed; width: 100%; z-index: 100; background: #ffffff; border-b
         opacity: 0; //안보이게 셋팅
         &.show{opacity: 1; transform:translateY(0);}
         .style_box{position: relative;
+            &:hover{
+                background: #ffffff; opacity: 0.2;
+                img {display: block;}}
             a{text-decoration: none; color: $main1;}
             p{font-size: 1.25rem; line-height: 150%;}
             .style_info{position: absolute; top: 50%; left: 0; width: 100%; text-align: center;
                 a{text-decoration: none; color: $main1;}
                 p{font-size: 1.25rem; line-height: 150%;}
                 span{text-align: center;}
+                
         }//.style_info
             p{text-align: center; font-size:1.52rem; padding-bottom: 20px;
             position: relative;
             img{display: none; position: absolute; top: -70%; left: 42%;}
-            &:hover img {display: block;}
         }
             a{text-decoration: none; color: $main1; }
 
