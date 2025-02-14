@@ -66,14 +66,14 @@ product.controller.control=artist;
 
 var style = new EzenScrollClass("#style_wrap",{
 	class:"show",
-    markers:true,
+    // markers:true,
     baseline:"middle",
     add:0.2, //화면 높이에 20%만큼 기준이 내려옴
 });
 
 var style = new EzenScrollClass("#community",{
 	class:"show",
-    markers:true,
+    // markers:true,
     baseline:"middle",
     add:0.2, //화면 높이에 20%만큼 기준이 내려옴
 });
